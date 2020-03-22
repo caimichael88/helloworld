@@ -9,7 +9,7 @@ app.use('/', express.static('public'));
     res.sendFile(path.resolve(__dirname, 'public/index.html'));
 })*/
 
-const PORT = process.env.ORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 app.get('*', (req, res) => {
     res.status(400).json({ message: 'page doesnot exist' });
